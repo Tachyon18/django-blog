@@ -1,0 +1,25 @@
+{% extends "base_layout.html" %}
+{% block contents%}
+<h1>Tachyonics Blogs</h1>
+<a class="btn btn-lg btn-success" href="{% url 'blog:add_blog' %}" role="button">Add Blog</a>
+
+<div class="row">
+  {% for blog in blogs%}
+    <div class="col-md-6">
+        <div class="card mb-2">
+              <img src="{{blog.image.url}}" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title"><a href="{% url 'blog:detail' slug=blog.slug %}">{{blog.title}}</a></h5>
+                <p class="card-text">{{blog.snippet}}</p>
+            </div>
+            <div class="card-footer text-muted">
+              {{blog.date}}
+              <a class="btn btn-danger" href="{% url 'blog:delete' slug=blog.slug %}" role="button">Delete Blog</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

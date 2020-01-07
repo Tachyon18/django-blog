@@ -1,0 +1,19 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>tachyonics blog</title>
+    <link rel="shortcut icon" type="image/jpg" href="{%static 'django.jpg'%}"/>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css'%}">
+  </head>
+  <body>
+    <div class="container">
+      {% block contents%}
+
+      {% endblock%}
+    </div>
+  </body>
+  <script src="{% static 'bootstrap.min.js'%}"></script>
+    <script src="{% static 'slugify.js'%}"></script>
+</html>

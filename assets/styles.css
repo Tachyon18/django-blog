@@ -1,0 +1,19 @@
+img{
+    height: 300px;
+}
+.my-row{
+    margin-top: 20px;
+}
+.card{
+     margin-top: 10px;
+     background-color:azure !important;
+}
+.btn{
+  float:right;
+}
+.btn-danger{
+  color: white !important;
+}
+.btn-info{
+    margin-left: 10px
+}
